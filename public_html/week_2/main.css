@@ -1,0 +1,45 @@
+/*
+Author: Tricia A. Jimenez
+Class/Section: COIN 65-02W, Spring 2009
+*/
+
+body {
+    background-color:white;
+    color:#006;
+}
+#logo {
+    background-color:#006;
+    color:white;
+    text-align:center;
+    text-transform:lowercase;
+}
+h1 {
+    color:#C00;
+    text-align:center;
+}
+p {
+    margin:50px;
+    text-align:justify;
+}
+ol {
+    margin-left:70px;
+    background-color:#006;
+    color:white;
+    list-style:upper-roman;
+}
+ol li {
+    margin-bottom:15px;
+}
+ul {
+    margin-left:70px;
+    list-style:square;
+}
+ul li{
+    margin-bottom:25px;
+}
+#footer p{
+    text-align:right;
+}
+img {
+    border:0px;   /* NOTE: this fixed the problem of a blue border around the logo */
+}

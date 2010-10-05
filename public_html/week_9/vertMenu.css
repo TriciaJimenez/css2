@@ -1,0 +1,61 @@
+/*
+Author: Tricia A. Jimenez
+Class/Section: COIN 65-02W, Spring 2009
+*/
+
+body { 
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    color: #000;
+    background-color: #FFF;
+}
+
+div#sidebar {
+    position: absolute;
+    top: 46px;
+    left: 36px;
+    width: 6em;
+    /* for testing location */
+    /*border: 1px solid green;*/
+}
+
+
+div#sideBar ul { 
+    margin: 0;
+    padding: 0;
+    list-style-type: none; 
+}  
+
+ul#backgroundBullets {
+    padding-left: 10px;
+    margin-left: 0;
+} 
+
+/*Position the image all the way to the left of the content area, but centered vertically:*/
+#backgroundBullets li,
+#backgroundBullets li:hover { 
+    padding-left: 30px;
+    list-style: none; 
+    background-repeat: no-repeat;
+    background-position: left center;
+} 
+
+/*If the user isn't hovering over the list item, don't display an image marker:*/
+#backgroundBullets li { 
+    background-image: none;
+} 
+
+#backgroundBullets li:hover {
+    background-image: url(images/Morpho-Diana-icon.jpg);
+}
+
+div#sidebar a { 
+    display: block;
+    text-decoration: none;
+    background: #CCF;
+    color: #333; 
+    padding: .2em .5em; 
+    border-bottom: 2px solid #fff;
+    width: 5em;
+}

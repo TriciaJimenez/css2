@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <!--
+      Author: Tricia A. Jimenez
+      Class/Section: COIN 65-02W, Spring 2009
+      Date Created:
+      Time:
+      Copyright &copy; 2009
+      -->
+
+    <head>
+        <title> Research: CSS Filter </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Language" content="en-us" />
+        <style type="text/css">
+            /* <![CDATA[ */
+            body, #header, hr, #footer{
+                margin: 0;
+                padding: 0;
+            }
+            #header, #footer {
+                text-align:center;
+                background-color: #CCF;
+                width: 100%;
+            }
+            
+            #header {
+                position: absolute;
+                top: 0px;
+                left: 0px;               
+            }
+            hr {
+                width: 100%;
+                color: blue;
+            }
+            
+            
+            #content {
+                position: relative;
+                top: 100px;
+                left: 0px;
+                padding-left: 50px;
+                padding-right: 50px;                
+                width: 600px;
+                text-align: justify;
+                /*background-color: #EFEFEF;*/
+            }
+            
+            #footer {
+                position: relative;
+                top: 100px;
+                left: 0px;
+            }
+            
+            #footer ul {
+                text-align: left;
+                list-style-type: none;
+            }
+            
+            .code {
+                background-color: #EFEFEF;
+            }
+            
+            .filterText {
+                color: purple;
+                border: 1px solid blue;
+                background-color: #F9A;
+            }
+            
+            /* ]]> */
+        </style>
+    </head>
+    
+    <body>
+        <!--header-->
+        <div id="header">
+            <h1> CSS Filter Properties </h1>
+            <hr />
+        </div>
+        <!--end header-->
+
+        <!--content-->
+        <div id="content">
+            
+            <p>The filter property creates an extensible mechanism allowing special visual effects to be applied to content.
+                There are currently three categories of filters: Visual filters and Reveal/Blend Transition filters. 
+                Multiple filters can be applied to a selector to produce interesting results, with the order of application 
+                often playing an important role in the final visual result. Current filters only apply in a visual context,
+                but the extensibility of the property could allow for other capabilities.
+            </p>
+            
+            <p>Although this property is included in CSS 3, it is not yet part of the W3C standard.  Most filters are supported 
+                only by Microsoft Internet Explorer 4.0+.  However, Javascript can be used to create similar visual effects in other
+                browsers like Firefox. If you include IE specific code for the filter property, you can validate your HTML code in W3C by
+                by gathering them all in an IE specific style sheet and including the style sheet through a conditional statement.
+                The validator and any browser other than Internet Explorer will parse it as regular comment, and thus just ignore it.
+            </p>
+            
+            <p class="code"><strong> &lt;!&#8211;[if IE]&gt;<br />
+                    &lt;link rel=&#8221;stylesheet&#8221; href=&#8221;filter.css&#8221; type=&#8221;text/css&#8221;
+                    media=&#8221;all&#8221; /&gt;<br />
+                &lt;![endif]&#8211;&gt;</strong>
+            </p>
+            
+            <p>You can apply one or more filters to an element. The general format is: </p>
+            
+            <p class="code">
+                filter: filtername1 (parameters)  filtername2 (parameters) .. filternameN (parameters)
+            </p>
+            
+            <p>Here is an example:</p>
+            
+            <p class="code">&lt;img src=&#8221;image.gif&#8221; mce_src=&#8221;image.gif&#8221;
+                style=&#8221;filter: blur(strength=50) flipv()&#8221;&gt;
+            </p>
+            
+            <p> Now let's experiment with each filter by applying each to the following text:</p>
+            
+            <p style="border: 1px solid red;
+            background-color: #EFEFEF;
+            font-weight: bold;
+            color: red;">NOTE: The css code only works with and should be viewed with IE 4.0+</p>
+            
+            <h1 class="filterText">CSS Filters are Fun!</h1>
+            
+            <!-- alpha -->
+            <h2>alpha</h2>
+            <p>The <em>alpha filter</em> is used to set the alpha transparency.</p>
+            <p class="code">
+                .filterTextAlpha {
+                filter: alpha(opacity=40);      
+                }               
+            </p>
+            <p>The equivalent CSS3 property(what Firefox also uses) is <em>opacity:x </em></p>
+            <h1 class="filterText" style="filter: alpha(opacity=40);">CSS Filters are Fun!</h1>
+            
+            
+            <!-- blur -->
+            <h2>blur</h2>
+            <p>The <em>blur filter</em> is used to display a fuzzy effect.</p>
+            <p class="code">
+                .filterTextBlur {
+                filter: blur(add = true, direction = 90, strength = 25);      
+                }               
+            </p>
+            <h1 class="filterText" style="filter: blur(add = true, direction = 90, strength = 25);">CSS Filters are Fun!</h1>
+            
+            
+            <!-- chroma -->
+            <h2>chroma</h2>
+            <p>The <em>chroma filter</em> is used to specify the color for the transparent color.</p>
+            <p class="code">
+                .filterTextChroma {
+                filter: chroma (color = purple);      
+                }               
+            </p>
+            <h1 class="filterText" style="filter: chroma(color = purple);">CSS Filters are Fun!</h1>            
+            
+            
+            <!-- dropshadow -->
+            <h2>dropshadow</h2>
+            <p>The <em>dropshadow filter</em> is used for the shadow effect.</p>
+            <p class="code">
+                NOTE: This does not work on IE8 - Why?
+                .filterTextDropShadow {
+                filter: dropshadow (color=#000, offx=15, offy=8, positive=5);      
+                }               
+            </p>
+            <h1 class="filterText" style="filter: dropshadow(color=#000, offx=15, offy=8, positive=5);">CSS Filters are Fun!</h1>               
+            
+            
+            <!-- fliph -->
+            <h2>fliph</h2>
+            <p>The <em>fliph filter</em> turns the element along the vertical axis.</p>
+            <p class="code">
+                .filterTextFliph {
+                filter: fliph(color=#0000ff,strength=3);      
+                }               
+            </p>
+            <h1 class="filterText" style="filter:fliph(color=#0000ff,strength=3);">CSS Filters are Fun!</h1> 
+            
+            
+            <h2>flipv</h2>
+            <p>The <em>flipv filter</em> turns the element along the horizontal axis.</p>
+            <p class="code">
+                .filterTextFlipv {
+                filter: flipv(color=#0000ff,strength=3);      
+                }               
+            </p>
+            <h1 class="filterText" style="filter:flipv(color=#0000ff,strength=3);">CSS Filters are Fun!</h1> 
+            
+            
+            
+            <h2>glow</h2>
+            <p>The <em>glow filter</em> produces a light-emitting effect.</p>
+            <p class="code">
+                NOTE: This does not work on IE8 - Why?
+                .filterTextGlow {
+                filter: glow(color=#f00,strength=8);     
+                }               
+            </p>
+            <h1 class="filterText" style="filter:glow(color=#f00,strength=8);">CSS Filters are Fun!</h1>            
+            
+            
+            <h2>grayscale</h2>
+            <p>The <em>grayscale filter</em> adds gray attributes to the element.</p>
+            <p class="code">
+                .filterGrayscale {
+                filter: gray;     
+                }               
+            </p>
+            <h1 class="filterText" style="filter:gray);">CSS Filters are Fun!</h1>  
+            
+            
+            
+            <h2>invert</h2>
+            <p>The <em>invert filter</em> reverses the visual attributes of an element
+            including color, saturation and brightness value.</p>
+            <p class="code">
+                .filterInvert {
+                filter: invert;     
+                }               
+            </p>
+            <h1 class="filterText" style="filter: invert);">CSS Filters are Fun!</h1>  
+            
+            
+            
+            <h2>mask</h2>
+            <p>Using the <em>mask filter</em> is like looking at the element through the color of the mask</p>
+            <p class="code">
+                NOTE: This does not work on IE8 - Why?
+                .filterMask {
+                filter: mask (color=#00ff00);     
+                }               
+            </p>
+            <h1 class="filterText" style="filter: mask(color=#00ff00);">CSS Filters are Fun!</h1>            
+            
+            
+            <h2>shadow</h2>
+            <p>Using the <em>shadow filter</em> projects the element in a certain direction</p>
+            <p class="code">
+                NOTE: This does not work on IE8 - Why?
+                .filterShadow {
+                filter: shadow(color=#0000ff,direction=45);     
+                }               
+            </p>
+            <h1 class="filterText" style="filter: shadow(color=#0000ff,direction=45);">CSS Filters are Fun!</h1>           
+            
+            
+            
+            <h2>wave</h2>
+            <p>The <em>wave filter</em> creates the "corrugated" effect.</p>
+            <p class="code">
+                .filterWave {
+                filter: wave(strength=3);     
+                }               
+            </p>
+            <h1 class="filterText" style="filter: wave(strength=3);">CSS Filters are Fun!</h1> 
+            
+            
+            
+            <h2>xray</h2>
+            <p>The <em>xray filter</em> creates the "XRay" effect .</p>
+            <p class="code">
+                .filterXray {
+                filter: xray;     
+                }               
+            </p>
+            <h1 class="filterText" style="filter: xray;">CSS Filters are Fun!</h1> 
+            
+            
+        </div>
+        <!--end content-->
+
+        <!--footer-->
+        <div id="footer">
+            <hr />
+            <ul> 
+                <li>css3.com <a href="http://www.css3.com/css-filter/">www.css3.com </a></li>
+                <li>css Filter Tutorial <a href="http://www.tutorialsto.com/website/css/css-filter.html">css Tutorial</a></li>
+                <li>W3C Validation <a href="http://www.pat-burt.com/troubleshooting/validating-css-filter-in-firefox/">Validating Filters in Firefox</a></li>
+            </ul>
+            <p> This site should be viewed with Microsoft Internet Explorer 4.0+ <br />
+                &copy;2009 Tricia A. Jimenez<br />
+            Last Updated: June 22, 2009</p>
+        </div>
+        <!--end footer-->
+
+    </body>
+</html>

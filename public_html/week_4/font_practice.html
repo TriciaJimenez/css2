@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <!--
+    Author: Tricia A. Jimenez
+    Class/Section: COIN 65-02W, Spring 2009
+    Date Created: Time: Copyright &copy; 2009
+    -->
+
+    <head>
+        <title>Font Practice</title>
+        <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Language" content="en-us" />
+        <style type="text/css">
+            /* <![CDATA[ */
+            body {
+                background-color:white;
+            }
+            .calloutBox {
+                /*border: 1px solid black;*/
+                background-color: #CDFFFF;
+                width: 75%;
+            }
+            .serif {
+                font-family: serif;
+            }
+            .sans-serif {
+                font-family: sans-serif;
+            }
+            .monospace {
+                font-family: monospace;
+            }
+            .fantasy {
+                font-family: fantasy;
+            }
+            .cursive {
+                font-family: cursive;
+            }
+            .arial {
+                font-family: Arial;
+            }
+            .size-1em {
+                font-size:1em;
+            }
+            .centuryGothic {
+                font-family: "Century Gothic";
+            }
+            .georgia {
+                font-family: Georgia;
+            }
+            .palatino {
+                font-family: Palatino;
+            }
+            .timesNewRoman {
+                font-family: "Times New Roman";
+            }
+            .xx-small {
+                font-size: xx-small;
+            }
+            .x-small {
+                font-size: x-small;
+            }
+            .small {
+                font-size: small;
+            }
+            .medium {
+                font-size: medium;
+            }
+            .large {
+                font-size: large;
+            }
+            .x-large {
+                font-size: x-large;
+            }
+            .xx-large {
+                font-size: xx-large;
+            }
+            .italic {
+                font-style: italic;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .smallCaps {
+                font-variant: small-caps;
+            }
+            .size12px{
+                font-size:12px;
+            }
+            .size12pt {
+                font-size:12pt;
+            }
+            .size2pc {
+                font-size:2pc;
+            }
+            .size12ml {
+                font-size:1.2cm;
+            }
+            .size2cm {
+                font-size:2cm;
+            }
+            /* ]]> */
+        </style>
+    </head>
+
+    <body>
+        <!--content-->
+
+        <h3>Generic</h3>
+        <p class="serif">serif: Every artist was first an amateur.</p>
+        <p class="sans-serif">sans-serif: Every artist was first an amateur.</p>
+        <p class="monospace">monospace: Every artist was first an amateur.</p>
+        <p class="fantasy">fantasy: Every artist was first an amateur.</p>
+        <p class="cursive">cursive: Every artist was first an amateur.</p>
+        <p class="calloutBox">
+            FINDINGS:
+            I am using FF 3 and IE 8. The default font size on FF is 16 px and on IE it is medium (16 px?).
+            The fantasy font was rendered differently in both browsers: rendered like sans-serif on FF and a variant of cursive
+            on IE. There were small differences in the cursive font. NOTE: Firebug's Computed Style was *fantasy* for FF
+            which is misleading.
+            In terms of size:
+            [serif]: IE was 30% wider| [sans-serif]: almost same| [monospace]: IE was around 25% wider|
+            [fantasy]: FF was 27% wider| [cursive]: FF was  22% wider and 25% taller.
+        </p>
+
+        <h3>Common Fonts</h3>
+        <p class="arial">Arial: Every artist was first an amateur.</p>
+        <p class="centuryGothic">Century Gothic: Every artist was first an amateur.</p>
+        <p class="georgia">Georgia: Every artist was first an amateur.</p>
+        <p class="palatino">Palatino: Every artist was first an amateur.</p>
+        <p class="timesNewRoman">Times New Roman: Every artist was first an amateur.</p>
+        <p class="calloutBox">
+            FINDINGS:
+            Firebug does not display the substituted font if the font is not available. For example, the computed font was still
+            "Palatino" even though "Times New Roman" was used. There is a setting to set the substituted font in FF. Serif was set
+            to "Times New Roman" and so "Palatino" which is in the serif family was substituted correctly.
+            IE duplicated the rendering of FF. My conclusion is that being more specific in naming the font caused the exact rendering.
+        </p>
+
+        <h3>Keyword Sizing</h3>
+        <p class="timesNewRoman xx-small">xx-small: Every artist was first an amateur.</p>
+        <p class="timesNewRoman x-small">x-small: Every artist was first an amateur.</p>
+        <p class="timesNewRoman small">small: Every artist was first an amateur.</p>
+        <p class="timesNewRoman medium">medium: Every artist was first an amateur.</p>
+        <p class="timesNewRoman large">large: Every artist was first an amateur.</p>
+        <p class="timesNewRoman x-large">x-large: Every artist was first an amateur.</p>
+        <p class="timesNewRoman xx-large">xx-large: Every artist was first an amateur.</p>
+        <p class="calloutBox">
+            FINDINGS:
+            FF and IE rendered identically. Firebug showed the following sizes:
+            [xx-small] 9px|
+            [x-small] 10px|
+            [small] 13px|
+            [medium] 16px|
+            [large] 18px|
+            [x-large] 24px|
+            [xx-large] 32px. NOTE: This approximates the CSS2 specification.
+        </p>
+
+        <h3>Styles and Variants</h3>
+        <div id="variant" class="arial size-1em">
+            <p class="italic">italic: Every artist was first an amateur.</p>
+            <p class="bold">bold: Every artist was first an amateur.</p>
+            <strong><em>strong emphasis: Every artist was first an amateur.</em></strong>
+
+            <p class="calloutBox">
+                FINDINGS:
+                FF and IE had no differences in rendering.
+            </p>
+
+            <p class="arial smallCaps">Arial small-caps: Every artist was first an amateur.</p>
+            <p class="palatino smallCaps">Palatino small-caps: Every artist was first an amateur.</p>
+            <p class="centuryGothic smallCaps">Century Gothic small-caps: Every artist was first an amateur.</p>
+
+            <p class="calloutBox">
+                FINDINGS: IE had a slightly bigger rendering for Palatino.
+            </p>
+        </div>
+
+        <h3>Absolute Sizing</h3>
+        <p class="serif size12px">12px: Every artist was first an amateur.</p>
+        <p class="serif size12pt">12pt: Every artist was first an amateur.</p>
+        <p class="serif size2pc">2pc: Every artist was first an amateur.</p>
+        <p class="serif size12ml">12ml: Every artist was first an amateur.</p>
+        <p class="serif size2cm">2cm: Every artist was first an amateur.</p>
+
+        <p class="calloutBox">
+            FINDINGS:
+            IE was bigger than FF for all 5 absolute sizes. Based on the lecture on "Absolute Sizes", the following would have
+            the same sizes: 24px, 18pt, 1.5pc, 6.35ml, 0.635cm.
+        </p>
+        <!--content-->
+
+    </body>
+
+</html>
+

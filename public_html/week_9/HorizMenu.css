@@ -1,0 +1,52 @@
+/*
+Author: Tricia A. Jimenez
+Class/Section: COIN 65-02W, Spring 2009
+*/
+
+body { 
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    color: #000;
+    background-color: #FFF;
+}
+
+div#topnav {
+    float: left; 
+    color: #000;
+    background-color: #66F;
+    /*border-bottom: 1px solid green;
+    border-top: 1px solid green;*/
+    width: 100%;
+}
+
+div#topnav ul { 
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    /*width: 100%;*/
+    width: 40em;  /* non-wrapping horizontal menu - produces horizontal scrollbar */
+}
+
+div#topnav li {
+    display: inline;
+}
+
+div#topnav a {
+    display: block;
+    float: left; 
+    padding: .2em 1em;
+    text-decoration: none;
+    color: #000; 
+    background-color: #66F;
+    border-right: 1px solid #fff;
+    width: 4em; 
+    text-align: center;
+    font-family: Arial;
+}
+
+div#topnav a:hover {
+    color: #FFF;
+    background-color: #6FF;
+}

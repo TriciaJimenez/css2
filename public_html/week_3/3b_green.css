@@ -1,0 +1,39 @@
+/*
+Author: Tricia A. Jimenez
+Class/Section: COIN 65-02W, Spring 2009
+*/
+
+body {
+    background-color:#CFC;
+    color:#060;
+    margin:25px;
+}
+#logo, h1, #footer {
+    text-align:center;
+}
+img {
+    border:0px;   /* NOTE: this fixed the problem of a blue border around the logo */
+}
+h1 {
+    margin-top:35px;
+    text-transform:uppercase;
+}
+h3 {
+    text-decoration:underline;
+}
+p {
+    text-indent:20px;
+}
+a {
+    text-decoration:none;
+}
+ul {
+    list-style-image:url("images/smball.gif");
+}
+ol {
+    background-color:#CFF;
+    color:#066;
+}
+#contentarea h1 {
+    color:#999;
+}

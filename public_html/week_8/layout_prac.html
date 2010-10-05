@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <title>Tricia Jimenez | Homework 8 | Layout </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="stylesheet" href="layout_prac.css" type="text/css" media="all" />
+    </head>
+    
+    <body>
+        <h1>
+            <img src="images/cnstctn1.gif" width="100" height="40"  alt="Under Construction" />
+            <i>CSS</i> Style Sheets for Design
+        </h1>
+        
+        <div id="Menu">
+            <ul>
+                <li> <a href="index.html">Schedule</a></li>
+                <li> <a href="http://krypton.fhda.edu/~coin65site/65_classlist.html">Class Sites</a> </li>
+                <li> <a href="http://krypton.fhda.edu/~coin65site/65_syllabus.html"> Syllabus</a> </li>
+                <li> <a href="http://krypton.fhda.edu/~coin65site/65_resources.html"> Resources</a> </li>
+                <li> <a href="https://etudes-ng.fhda.edu/portal">Etudes</a></li>
+                <li> <a href="http://www.foothill.edu/ctis/index.php">CTIS</a> </li>
+                <li> <a href="http://www.foothill.edu/index.php">Foothill</a></li>
+            </ul>	
+        </div>
+        
+        <div id="Content">
+            <h2>Document Hierarchy</h2>
+            
+            <p>Please read pages 25 - 27 from the Stylin' textbook. This document covers the concepts 
+                on those pages and emphasizes the terminology. This material will be covered in more 
+            depth in future weeks.</p>
+            
+            <p>On page 25 the text has this snippet of code, which has the elements listed. The actual 
+                content has been removed and you see only the <i>elements</i> with the document 
+            hierarchy:</p>
+            
+            <pre> 
+         &lt;body&gt;
+            &lt;div id="logo"&gt;
+            
+               &lt;img /&gt;
+
+               &lt;h3&gt;   &lt;/h3&gt;
+               
+            &lt;/div&gt;
+         &lt;/body&gt;
+            </pre>
+            
+            
+            <p>The author has this image of the relationship between the different elements in 
+            the document:</p>
+            <h3>Terminology - <i>Parent</i></h3>
+            
+            <p>In terms of an object oriented environment, the <b><i>parent</i></b> is the element 
+            directly above the current element.</p>
+            
+            <p>The parent of the DIV element is the BODY element. If the BODY element is styled, then 
+                then the DIV (and any elements nested within) inherit the <b><i>properties</i></b> of 
+                the parent. If the <b><i>body</i></b> element is styled to display text in the "Verdana" 
+                font-family, then all text in the body, and any element contained within, will be 
+            displayed in the Verdana font-family - the entire document displays in the Verdana font-family.</p>
+            <p>The parent of the IMG and H3 tags is the DIV element directly above it. If the DIV is 
+                not-styled, then these <b><i>children</i></b> (the IMG and H3) inherit the 
+                characteristics/properties of the <b><i>parent</i></b> (body) - text will display in the Verdana 
+            font-family.</p>
+            <p>If the DIV element is styled to display a different font such as "Arial", then all 
+                elements within the block-level DIV element will <b><i>inherit</i></b> the properties of the parent 
+                - the H3 tag will display in the Arial font-family. This overrides the BODY style because 
+            the children (H3) inherit the properties of the <i>parent</i>.</p>
+            
+            <p>Text elsewhere in the document displays as "Verdana" but the text inside the DIV element 
+                displays as Arial. The parent of the H3 element inherits the characteristics/properties of 
+                the parent whose font-family is set to "Arial". Other elements below, which are not inside 
+                this DIV element inherit the properties of its parent - the BODY element and will display 
+            in the "Verdana" font-family.</p>
+            <div id="Footer">
+                <p>This site is best viewed with a "modern" browser - Firefox, Netscape, Opera, Safari (not IE 6 or below)<br />
+                    For best results, install the following plug-ins: Adobe Acrobat Reader, Quicktime, and RealAudio.<br />
+                    Copyright &copy;2006-2009 Ken Seto, Sandi Watkins &amp; Greg Mcilhiney<br />
+                    Internet Technologies Department / Computers, Technology &amp; Information Systems Division<br />
+                    Last Update: Tuesday, February 24, 2009 at 11:45 PM
+                </p>
+            </div>
+        </div>  
+    </body> 
+</html>

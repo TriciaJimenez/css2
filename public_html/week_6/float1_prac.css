@@ -1,0 +1,26 @@
+/*
+Author: Tricia A. Jimenez
+Class/Section: COIN 65-02W, Spring 2009
+*/
+
+body {
+    margin: 2%;
+    font-family: verdana, arial, sans-serif;
+    font-size: 16px;
+    min-width: 600px;
+}
+.float_left {
+    float: left;
+    padding-right: 0.5em;
+}
+.float_right {
+    float: right;
+    padding-left: 0.5em;
+}
+.justify {
+    text-align: justify;  
+}
+.clear_both {
+    clear: both;
+}
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <!--
+    Author: Tricia A. Jimenez
+    Class/Section: COIN 65-02W, Spring 2009
+    Date Created: Time: Copyright &copy; 2009
+    -->
+
+    <head>
+        <title>Percentage Sizing</title>
+        <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Language" content="en-us" />
+        <style type="text/css">
+            body {
+                font-family: Arial;
+            }
+            .calloutBox {
+                /*border: 1px solid black;*/
+                background-color: #CDFFFF;
+                width: 75%;
+            }
+            .body100 {
+                font-size: 100%;
+            }
+            .body75 {
+                font-size: 75%;
+            }
+            .body115 {
+                font-size: 115%;
+            }
+            .palatino {
+                font-family: Palatino;
+            }
+
+            .centuryGothic {
+                font-family: "Century Gothic";
+            }
+            h1 {
+                font-size: 1.2em;
+            }
+            h2 {
+                font-size: 1.1em;
+            }
+            h3 {
+                font-size: 1em;
+            }
+            p {
+                font-size: 0.76em;
+            }
+            h4 {
+                font-size: 0.76em;
+            }
+            ul {
+                font-size: 0.76em;
+            }
+            a {
+                font-size: 0.76em;
+            }
+            ol {
+                font-size: 0.5em;
+            }
+            p a {
+                font-size: inherit;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="body100">
+            <h1>Arial</h1>
+            body[100%]: Every artist was first an amateur.
+            <h1>h1[1.2em]: Every artist was first an amateur.</h1>
+            <h2>h2[1.1em]: Every artist was first an amateur.</h2>
+            <h3>h3[1em]: Every artist was first an amateur.</h3>
+            <p>p[0.76em]: Every artist was first an amateur.</p>
+            <h4>h4[0.76em]: Every artist was first an amateur.</h4>
+            <ul>
+                <li>[0.76em]Every artist was first an amateur.</li>
+                <li>[0.76em]Every artist was first an amateur.</li>
+            </ul>
+            <a href="#">a[0.76em]: Every artist was first an amateur.</a>
+            <ol>
+                <li>[0.5em]Every artist was first an amateur.</li>
+                <li>[0.5em]Every artist was first an amateur.</li>
+            </ol>
+        </div>
+
+        <div class="palatino">
+            <h1>Palatino</h1>
+            body[100%]: Every artist was first an amateur.
+            <h1>h1[1.2em]: Every artist was first an amateur.</h1>
+            <h2>h2[1.1em]: Every artist was first an amateur.</h2>
+            <h3>h3[1em]: Every artist was first an amateur.</h3>
+            <p>p[0.76em]: Every artist was first an amateur.</p>
+            <h4>h4[0.76em]: Every artist was first an amateur.</h4>
+            <ul>
+                <li>[0.76em]Every artist was first an amateur.</li>
+                <li>[0.76em]Every artist was first an amateur.</li>
+            </ul>
+            <a href="#">a[0.76em]: Every artist was first an amateur.</a>
+            <ol>
+                <li>[0.5em]Every artist was first an amateur.</li>
+                <li>[0.5em]Every artist was first an amateur.</li>
+            </ol>
+        </div>
+
+        <div class="centuryGothic">
+            <h1>Century Gothic</h1>
+            body[100%]: Every artist was first an amateur.
+            <h1>h1[1.2em]: Every artist was first an amateur.</h1>
+            <h2>h2[1.1em]: Every artist was first an amateur.</h2>
+            <h3>h3[1em]: Every artist was first an amateur.</h3>
+            <p>p[0.76em]: Every artist was first an amateur.</p>
+            <ul>
+                <li>[0.76em]Every artist was first an amateur.</li>
+                <li>[0.76em]Every artist was first an amateur.</li>
+            </ul>
+            <a href="#">a[0.76em]: Every artist was first an amateur.</a>
+            <ol>
+                <li>[0.5em]Every artist was first an amateur.</li>
+                <li>[0.5em]Every artist was first an amateur.</li>
+            </ol>
+        </div>
+
+        <div class="calloutBox">
+            FINDINGS:
+            On both FF and IE, the Arial font and the Century Gothic font were the same size. However, IE had a slightly bigger
+            display for the Palatino. The links had the right size (same number of pixels as non-links with the same "em" length.
+        </div>
+
+        <div>
+            <h1>Force link to have same size as P tag it resides in</h1>
+            <p>p[0.76em]:Every artist was first an amateur <a href="#">Every artist was first an amateur.</a></p>
+        </div>
+
+        <div class="body75">
+            body[75%]: Every artist was first an amateur.
+            <p>p[0.76em]:Every artist was first an amateur <a href="#">Every artist was first an amateur.</a></p>
+        </div>
+
+        <div class="body115">
+            body[115%]: Every artist was first an amateur.
+            <p>p[0.76em]:Every artist was first an amateur <a href="#">Every artist was first an amateur.</a></p>
+        </div>
+
+        <div class="calloutBox">
+            FINDINGS:
+            Both the font sizes of the p and the a tags were increased/decreased in approximately the same proportion as the body tag.
+            For example for 75% body size: 12.1667 px (this is the px size for p at 100%) times 75%.
+        </div>
+
+    </body>
+
+</html>
+

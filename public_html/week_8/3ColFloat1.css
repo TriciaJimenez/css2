@@ -1,0 +1,50 @@
+/*
+Author: Tricia A. Jimenez
+Class/Section: COIN 65-02W, Spring 2009
+*/
+
+/* reset margins. set font and size */
+body { 
+    margin:0px;
+    padding:0px;
+    font: 1.0em verdana, arial, sans-serif;
+    color: #FFCC33;
+} 
+/* set header width and bg color */
+
+div#header { 
+    width:450px;
+    background-color:#6A2A00;
+} 
+
+/* set content container width and bgcolor */
+div#contentArea {
+    width:450px;
+    background-color:#EF8A46;
+    border: white solid;
+}
+
+/* set content width and bg color */
+div#column1 {
+    width:150px; 
+    background-color:#624208;
+    float: left;
+} 
+div#column2 {
+    width:150px;
+    background-color:#625908;
+    float: left;
+}
+div#column3 {
+    width:150px;
+    background-color:#C0560F;
+    float: left;
+} 
+div.clearfloats {
+    clear: both; 
+}
+/* set footer width and bg color */ 
+div#footer {
+    width:450px;
+    background-color:#423227;
+}

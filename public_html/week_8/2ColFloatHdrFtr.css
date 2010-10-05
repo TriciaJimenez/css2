@@ -1,0 +1,75 @@
+/*
+Author: Tricia A. Jimenez
+Class/Section: COIN 65-02W, Spring 2009
+*/
+
+body {
+    text-align: center;
+    background: #B0BFC2;
+    color: #444;
+} 
+#container { 
+    text-align: left; 
+    margin: 0 auto;
+    width: 700px;
+    background: #FFF url(images/nav-back.gif) repeat-y;
+}
+h1 {
+    background: #D36832;
+    color: #FFF;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 5px solid #387A9B;
+} 
+#nav {
+    /* move navigation next to content */
+    float: left; width: 130px;
+    /* fixes IE Double Margin Float bug */ 
+    display: inline;
+    margin-left: 20px;
+    padding: 15px 0;
+} 
+#nav ul { 
+    /*border: 1px solid black;*/
+    /* remove after debug */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: right;
+} 
+#nav li {
+    background: url(images/nav-bullet.gif)
+    /* place against the right edge and 0.4em from the top */
+    no-repeat 100% .4em;
+    /* move away from image on right and add space at bottom */
+    padding: 0 10px 5px 0;
+}
+#content { 
+    float: left;
+    width: 475px;
+    margin-left: 45px;
+    padding: 15px 0;
+} 
+#footer { 
+    clear: both;
+    background: #387A9B;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: right;
+    font-size: 80%;
+} 
+h2 { 
+    margin-top: 0;
+    color: #B23B00; 
+    font-weight: normal;
+} 
+a:link { 
+    color: #175B7D;
+}
+a:visited {
+    color: #600;
+} 
+a:hover, a:active {
+    color: #fff; 
+    background: #175B7D;
+} 

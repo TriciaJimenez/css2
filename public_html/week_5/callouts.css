@@ -1,0 +1,50 @@
+/*
+Author: Tricia A. Jimenez
+Class/Section: COIN 65-02W, Spring 2009
+*/
+
+body {
+    margin: 2% 5%;
+    background-color: white;
+    color: #000;
+    font-family: Arial, serif;
+    font-size: 16px;
+}
+h1 {
+    color:#000;
+}
+p {
+    padding-left: 1.5em;
+    text-align: justify;
+}
+div.redBox {
+    margin-left: 1.5em;
+    background-color: #f4eaea;
+    border: red solid thin;
+}
+div.redBox h2{
+    margin: 1em 0.25em 0em;
+    border-bottom: black solid thin;
+    font-size:24px;
+}
+div.redBox p{
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+div.blueBox {
+    margin-left: 4em;
+    margin-right: 5em;
+    background-color: #eaeaf4 ;
+    border: #A6A6D9 solid thin;
+}
+div.blueBox p{  /* Note: Had to change from em to px units to account for different font sizes for h2 & p */
+    padding-left: 40px;
+    padding-right: 40px;
+}
+div.blueBox h2{
+    padding-bottom: 0em;
+    margin-left: 40px;  /* To prevent bottom border from extending all the way left/right */
+    margin-right: 40px;
+    border-bottom: black solid thin;
+    font-size: 18px;
+}

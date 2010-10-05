@@ -1,0 +1,89 @@
+/*
+Author: Tricia A. Jimenez
+Class/Section: COIN 65-02W, Spring 2009
+*/
+
+body {
+    background-color:#FFA;
+    color:#006;
+    margin-left:25px;
+    margin-right:25px;
+}
+#header, #footer {
+    text-align:center;
+    color:#2A2;
+}
+#header {
+    border-bottom:medium solid navy;
+    margin-bottom:25px;
+}
+#header a:link {
+    text-decoration:none;
+    color:blue;
+}
+#header a:visited {
+    color:red;
+}
+#header a:hover {
+    text-decoration:underline;
+    color:#0FF;
+}
+#header a:active {
+    color:purple;
+}
+h1 {
+    font-family:fantasy;
+    color:#0A0;
+    font-size:40px;
+}
+#content h2 {
+    color:#900;
+    font-style:italic;
+}
+#content p {
+    margin-left:25px;
+    margin-right:25px;
+}
+h2 + p:first-line {
+    font-weight:bold;
+    font-style:italic;
+    font-variant:small-caps;
+    color:#06A;
+}
+#content a:link {
+    text-decoration:underline;
+    color:red;
+}
+#content a:visited {
+    color:blue;
+}
+#content a:hover {
+    text-decoration:none;
+    color:#0F0;
+}
+#content a:active {
+    color:teal;
+}
+/* NOTE: .just ".quote" indents like element p */
+#content .quote {
+    margin-left:50px;
+    padding-left:10px;
+    color:#090;
+    font-style:italic;
+    border-left:thick solid #099;
+}
+#content em {
+    font-weight:bold;
+    color:red;
+}
+p.bigLetter:first-letter {
+    font-size:300%;
+    line-height:90%;
+    float:left;
+    color:blue;
+}
+#footer {
+    border-top:medium solid navy;
+    margin-top:25px;
+    padding-top:10px;
+}
